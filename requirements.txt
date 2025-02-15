@@ -1,0 +1,6 @@
+flask
+requests
+google-generativeai
+python-dotenv
+
+#pip install -r requirements.txt
