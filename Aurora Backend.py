@@ -33,19 +33,31 @@ def generate_itinerary(user_input):
         ===
         [Narration 1 (max 200 words)]
         ===
+        [Rating number out of 5 (e.g. 4)]
+        ===
+        [Interests (e.g. Historical, Nature, Parking, Accessiblity, etc...)]
+        ===
+        [Exact Location (e.g. (Jeddah Corniche, Jeddah))]
+        ===
         [Timeslot (e. g. 1:00-4:00 PM)]
         ===
-        [Accessibility options? (e.g. wheelchair access)]
+        [Budget (e.g. Free, 50-100 SAR, etc...)]
         ===
+        [Website of the place (e.g. https://www.museumofart.com)]
         ---
         [Location Name 2 (e.g. Museum of Art)]
         ===
         [Narration 2 (max 200 words)]
         ===
+        [Interests (e.g. Historical, Nature, Parking, Accessiblity, etc...)]
+        ===
+        [Exact Location (Jeddah Corniche, Jeddah)]
+        ===
         [Timeslot (e. g. 1:00-4:00 PM)]
         ===
-        [Accessibility options? (e.g. wheelchair access)]
+        [Budget (e.g. Free, 50-100 SAR, etc...) MUST BE A SHORT ANSWER]
         ===
+        [Website of the place (e.g. https://www.museumofart.com)]
         ---
         (repeat for more locations)
         Remove anything with square brackets [] and replace it with the relevant information (MAKE SURE TO REMOVE THE BRACKETS).
@@ -53,11 +65,15 @@ def generate_itinerary(user_input):
     INSURE TO FOLLOW THESE GUIDELINES:
     DO NOT WRITE ANY EXTRA TEXT IN THE RESPONSE.
     ENSURE THE FORMAT IS STRICTLY FOLLOWED.
-    THE NARRATION MUST NOT EXCEED 200 WORDS PER LOCATION AND MUST NOT INCLUDE ANY CHARACTERS UNREADABLE BY THE AI (e.g. emojis, astriscs, hashtags, etc...).
+    THE NARRATION MUST NOT EXCEED 200 WORDS PER LOCATION AND MUST NOT INCLUDE ANY MARKDOWN CHARACTERS (e.g. bolding text with **text**).
     ENSURE NO LOCATION IS REPEATED IN THE RESPONSE.
     ENSURE THE RESPONSE INCLUDES AT LEAST 3 LOCATIONS AND NO MORE THAN 10 LOCATIONS.
     ENSURE THE TIMELINE IS REALISTIC AND ALLOWS FOR TRAVEL TIME BETWEEN LOCATIONS.
     ENSURE NO TWO LOCATIONS ARE AT THE SAME TIMESLOT.
+    DO NOT WRITE THE ZIP CODE IN THE EXACT LOCATION.
+    ENSURE THE BUDGET IS REALISTIC FOR THE LOCATION.
+    ENSURE THE WEBSITE IS REAL AND RELEVANT TO THE LOCATION.
+    ENSURE THE WEBSITE IS A FULL URL (e.g. https://www.museumofart.com).
     """
     client = genai.Client(api_key=GEMENI_API_KEY)
     print("Sending prompt to Gemini API...")
@@ -74,15 +90,19 @@ def generate_itinerary(user_input):
         parts = stop.split("\n===\n")
         if len(parts) < 3:
             continue
-        location_name, narration, timeslot, accessibility = parts[:4]
+        location_name, narration, rating, interests, exact_location, timeslot, price, website = parts[:8]
         print(f"Processing stop: {location_name.strip()}")
         image_url = fetch_image(location_name.strip()) if location_name.strip() else None
-        tts_file = generate_voiceover(narration.strip(), location_name.strip())
+        tts_file = None#generate_voiceover(narration.strip(), location_name.strip())
         segments.append({
-            "location": location_name.strip('[ ]'),
+            "location_name": location_name.strip('[]'),
             "text": narration.strip(),
+            "rating" : int(rating.strip()),
+            "interests": interests.strip().split(","),  # Split interests into list
+            "exact_location" : exact_location.strip(),
             "time_slot": timeslot.strip(),
-            "accessibility": accessibility.strip(),
+            "price": price.strip(),
+            "website": website.strip(),
             "image_url": image_url,
             "tts_filename": tts_file
         })
@@ -135,7 +155,7 @@ def fetch_image(query):
     return None
 
 # Testing Purposes
-def save_response_to_markdown(response_text, filename="gemini_response.md"):
+def save_response_to_markdown(response_text, filename="gemini_response.txt"):
     with open(filename, "w") as f:
         f.write(json.dumps(response_text, indent=4))
     print(f"Saved Gemini API response to {filename}")
