@@ -1,14 +1,14 @@
 [
     {
         "location_name": "National Museum of Saudi Arabia",
-        "text": "Welcome, fellow travelers, to the National Museum of Saudi Arabia! Prepare to journey through millennia, from the dawn of civilization on the Arabian Peninsula to the modern Kingdom. This isn't just a museum; it's a time capsule, a storyteller whispering tales of ancient trade routes, religious pilgrimages, and the unification of a nation. Marvel at prehistoric artifacts, intricate Islamic art, and captivating displays that bring Saudi Arabia's rich heritage to life. Don't miss the recreation of a traditional Najdi house, offering a glimpse into the daily lives of the kingdom's ancestors. The museum beautifully balances education and entertainment, providing a comprehensive and accessible experience for all.",
+        "text": "Welcome to the National Museum of Saudi Arabia, a cornerstone of Riyadh's cultural landscape. Here, you will embark on a captivating journey through the Arabian Peninsula's rich history, from prehistoric times to the modern era. The museum's eight halls showcase artifacts, historical documents, and interactive displays, offering profound insights into the kingdom's heritage and its pivotal role in Islamic civilization. The displays weave a compelling narrative of the Saudi people, their traditions, and their contributions to the world. Prepare to be transported through time as you uncover the captivating story of Saudi Arabia.",
         "rating": 5,
         "interests": [
             "Historical",
             " Cultural",
+            " Museum",
             " Accessibility",
-            " Parking",
-            " Cafe"
+            " Parking"
         ],
         "exact_location": "King Saud Rd, Al Murabba, Riyadh",
         "time_slot": "9:00 AM - 12:00 PM",
@@ -19,53 +19,38 @@
     },
     {
         "location_name": "Masmak Fortress",
-        "text": "Our next stop transports us to the heart of Riyadh's history: Masmak Fortress! This imposing clay and mud-brick citadel witnessed the daring recapture of Riyadh in 1902 by Ibn Saud, a pivotal moment in the founding of modern Saudi Arabia. Imagine the clashing of swords and the fervor of battle as you explore its walls, towers, and mosque. The fortress now serves as a museum, displaying artifacts and exhibits that chronicle this dramatic period. Climb to the top of the watchtower for panoramic views of the surrounding area, and feel the weight of history beneath your feet. It's a powerful and evocative experience.",
+        "text": "Next, we journey to the Masmak Fortress, a formidable clay and mud-brick citadel that stands as a potent symbol of Saudi Arabia's unification. In 1902, King Abdulaziz Al Saud and his men bravely stormed this very fortress, reclaiming Riyadh and setting the stage for the establishment of the modern kingdom. As you walk through its imposing gates, you'll feel the weight of history. Explore the courtyard, mosque, watchtowers, and learn about the courageous events that unfolded within these walls. Imagine the clashing of swords and the echoes of victory that resonate through time.",
         "rating": 4,
         "interests": [
             "Historical",
             " Cultural",
+            " Architecture",
             " Accessibility",
             " Parking"
         ],
-        "exact_location": "Al Imam Turki Ibn Abdullah Ibn Muhammad, Ad Dirah, Riyadh",
+        "exact_location": "Al Murabba, Riyadh",
         "time_slot": "1:00 PM - 3:00 PM",
         "price": "Free",
-        "website": "N/A",
+        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/al-masmak-fortress",
         "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
         "tts_filename": null
     },
     {
         "location_name": "Diriyah",
-        "text": "Prepare to step back in time at Diriyah, the historical capital of the First Saudi State and a UNESCO World Heritage site. This ancient city, now carefully restored, offers a mesmerizing glimpse into the kingdom's roots. Wander through the narrow, winding streets of At-Turaif district, marvel at the traditional Najdi architecture, and imagine life as it was centuries ago. Explore the Salwa Palace, once the seat of power, and immerse yourself in the stories of kings and warriors. Diriyah is more than just ruins; it's a living testament to Saudi Arabia's enduring legacy.",
+        "text": "Finally, we venture to Diriyah, a UNESCO World Heritage Site and the ancestral home of the Saudi royal family. This historical city was the first capital of the Saudi dynasty, dating back to the 18th century. Wander through the ruins of mud-brick palaces, mosques, and traditional houses, marveling at the architectural ingenuity of the time. As you explore the Al-Turaif district, the heart of Diriyah, you'll gain a deeper appreciation for the origins of the Saudi state and the cultural values that have shaped the nation.",
         "rating": 5,
         "interests": [
             "Historical",
             " Cultural",
+            " UNESCO World Heritage",
             " Accessibility",
-            " Parking",
-            " Cafe",
-            " Restaurants"
+            " Parking"
         ],
         "exact_location": "Diriyah, Riyadh",
         "time_slot": "4:00 PM - 6:00 PM",
         "price": "50-100 SAR",
-        "website": "https://dgda.gov.sa/en/",
+        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/diriyah",
         "image_url": "https://images.pexels.com/photos/1885720/pexels-photo-1885720.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
-    },
-    {
-        "location_name": "Najd Village Restaurant",
-        "text": "As the day winds down, let's treat ourselves to an authentic culinary experience at Najd Village Restaurant. Here, you'll savor the rich flavors of traditional Saudi cuisine in a setting that evokes the warmth and hospitality of a Najdi home. Imagine sitting on comfortable floor cushions, surrounded by intricate carpets and traditional decor, as you feast on dishes like Mandi (slow-cooked meat and rice) and Kabsa (a fragrant rice dish with spices). It's more than just a meal; it's a cultural immersion, a chance to connect with the heart and soul of Saudi Arabia through its food.",
-        "rating": 4,
-        "interests": [
-            "Food",
-            " Cultural"
-        ],
-        "exact_location": "Al Olaya, Riyadh",
-        "time_slot": "7:00 PM - 8:30 PM",
-        "price": "100-200 SAR",
-        "website": "N/A",
-        "image_url": "https://images.pexels.com/photos/2031687/pexels-photo-2031687.jpeg?auto=compress&cs=tinysrgb&h=350",
         "tts_filename": null
     }
 ]
