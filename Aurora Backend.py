@@ -4,7 +4,7 @@ import json
 from google import genai
 import os
 from dotenv import load_dotenv
-
+from flask_cors import CORS
 # Load environment variables
 load_dotenv()
 GEMENI_API_KEY = os.getenv("GEMENI_API_KEY")
@@ -77,7 +77,7 @@ def generate_itinerary(user_input):
         location_name, narration, timeslot, accessibility = parts[:4]
         print(f"Processing stop: {location_name.strip()}")
         image_url = fetch_image(location_name.strip()) if location_name.strip() else None
-        tts_file = generate_voiceover(narration.strip(), location_name.strip())
+        tts_file = None #generate_voiceover(narration.strip(), location_name.strip())
         segments.append({
             "location": location_name.strip('[ ]'),
             "text": narration.strip(),
@@ -156,17 +156,51 @@ def test_generate():
 
 # App
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 @app.route("/generate", methods=["POST"])
 def generate():
-    user_input = request.json
-    print(f"API call received with input: {user_input}")
-    itinerary = generate_itinerary(user_input)
-    print("Returning generated itinerary response.")
-    return jsonify({"itinerary": itinerary})
+    try:
+        user_input = request.json
+        print(f"API call received with input: {user_input}")
+        
+        # Validate required fields
+        required_fields = ['destination', 'time_slot', 'interests', 'budget']
+        for field in required_fields:
+            if field not in user_input or not user_input[field]:
+                return jsonify({"error": f"Missing required field: {field}"}), 400
+
+        # Ensure interests is a list
+        if not isinstance(user_input['interests'], list):
+            return jsonify({"error": "Interests must be a list"}), 400
+
+        itinerary = generate_itinerary(user_input)
+        
+        if not itinerary:
+            return jsonify({"error": "Failed to generate itinerary"}), 500
+            
+        return jsonify({"itinerary": itinerary})
+    except Exception as e:
+        print(f"Error processing request: {str(e)}")
+        return jsonify({"error": str(e)}), 500
+
+# Add this near the top of the file after imports
+def validate_api_keys():
+    missing_keys = []
+    if not GEMENI_API_KEY:
+        missing_keys.append("GEMENI_API_KEY")
+    if not PEXELS_API_KEY:
+        missing_keys.append("PEXELS_API_KEY")
+    if not ELEVENLABS_API_KEY:
+        missing_keys.append("ELEVENLABS_API_KEY")
+    if not ELEVENLABS_VOICE_ID:
+        missing_keys.append("ELEVENLABS_VOICE_ID")
+    
+    return True
 
 if __name__ == "__main__":
-    print("Launching test run...")
-    result = test_generate()
+    if not validate_api_keys():
+        print("Error: Missing required API keys. Please check your .env file.")
+        exit(1)
     print("Launching Flask server...")
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

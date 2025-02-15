@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import AudioVisualizer from "./components/AudioVisualizer";
 
-const TimelineScheduler = () => {
+const TimelineScheduler = ({ itineraryData, isLoading, error }) => {
   const scrollContainerRef = useRef(null);
   const [currentPlayingAudio, setCurrentPlayingAudio] = useState(null);
 
@@ -42,76 +42,53 @@ const TimelineScheduler = () => {
     };
   }, []);
 
-  const scheduleData = [
-    {
-      time: "8:00 - 9:00 ",
-      title: "King Fahd Fountain",
-      description:
-        "The tallest fountain in the world, located along the Jeddah Corniche.",
-      duration: "1 hr",
-      image: "https://masakentaibah.com/wp-content/uploads/2024/04/22.jpg", // Replace with your own image
-      cost: "Free",
-      website: "https://www.saudigov.sa",
+  if (isLoading) {
+    return (
+      <div className="w-full max-w-4xl mx-auto p-6 text-center">
+        <div className="animate-pulse">
+          <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
+          <div className="h-32 bg-gray-200 rounded-lg mb-4"></div>
+          <div className="h-48 bg-gray-200 rounded-lg"></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="w-full max-w-4xl mx-auto p-6 text-center text-red-600">
+        <p>Error loading itinerary: {error}</p>
+      </div>
+    );
+  }
+
+  if (!itineraryData || itineraryData.length === 0) {
+    return (
+      <div className="w-full max-w-4xl mx-auto p-6 text-center">
+        <p className="text-gray-600">
+          No itinerary data available. Please generate an itinerary first.
+        </p>
+      </div>
+    );
+  }
+
+  const scheduleData =
+    itineraryData?.map((item) => ({
+      time: item.time_slot,
+      title: item.location,
+      description: item.text,
+      duration: item.time_slot, // Using the full time slot as duration
+      image: item.image_url || "/placeholder-image.jpg", // Add a fallback image
+      cost: "Free", // Default value if not provided by backend
+      website: "#", // You might want to add this to your backend response
       details: {
-        address: "Jeddah Corniche, Jeddah, Saudi Arabia",
-        rating: 5,
-        bestTime: "Evening for a beautiful light show",
-        facilities: ["Public Viewpoint", "Parking", "Walkways"],
+        address: item.location,
+        rating: 4.5, // You might want to add this to your backend response
+        bestTime: item.time_slot,
+        facilities: item.accessibility ? item.accessibility.split(", ") : [],
       },
-      audioDescription: "../src/assets/music.mp3", // Add audio URLs for each location
-    },
-    {
-      time: "10:00",
-      title: "Al-Balad (Historic Jeddah)",
-      description:
-        "A UNESCO World Heritage site, Al-Balad is the historic district of Jeddah with traditional buildings.",
-      duration: "2:00",
-      image:
-        "https://whc.unesco.org/uploads/thumbs/site_1361_0012-1200-630-20200605161637.jpg", // Replace with your own image
-      cost: "Free",
-      website: "https://www.jeddah.gov.sa",
-      details: {
-        address: "Al-Balad, Jeddah, Saudi Arabia",
-        rating: 4,
-        bestTime: "Morning to avoid crowds",
-        facilities: ["Cultural Sites", "Shopping", "Restaurants"],
-      },
-    },
-    {
-      time: "13:00",
-      title: "Jeddah Corniche",
-      description:
-        "A beautiful waterfront area along the Red Sea with parks, walkways, and stunning views.",
-      duration: "2:00",
-      image:
-        "https://images.locationscout.net/2020/03/the-read-sea-saudi-arabia-hrrc.webp?h=1400&q=80", // Replace with your own image
-      cost: "Free",
-      website: "https://www.jeddah.gov.sa",
-      details: {
-        address: "Jeddah Corniche, Jeddah, Saudi Arabia",
-        rating: 4.6,
-        bestTime: "Late afternoon for a sunset view",
-        facilities: ["Parks", "Walking Paths", "Restaurants"],
-      },
-    },
-    {
-      time: "18:00",
-      title: "Jeddah International Film Festival",
-      description:
-        "A celebration of international and local cinema with screenings, workshops, and celebrity guest appearances.",
-      duration: "3:00",
-      image:
-        "https://cdn.sanity.io/images/d1a1yw91/production/53cc7c61319456b53e26ac175a425cfe61593b37-4500x3001.jpg?rect=0,236,4500,2531&w=3840&h=2160&q=95&fit=max&auto=format&width=3840", // Replace with your own image
-      cost: "SAR 150",
-      website: "https://www.jiff.sa",
-      details: {
-        address: "Jeddah Hilton, Jeddah, Saudi Arabia",
-        rating: 4.6,
-        bestTime: "Opening ceremony in the evening",
-        facilities: ["Cinemas", "Workshops", "Meet & Greets"],
-      },
-    },
-  ];
+      audioDescription: item.tts_filename,
+    })) || [];
 
   const getCardHeight = (duration) => {
     const [hours] = duration.split(":").map(Number);

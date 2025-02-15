@@ -1,6 +1,6 @@
 flask
 requests
-google-generativeai
+google-genai
 python-dotenv
-
+flask_cors
 #pip install -r requirements.txt
