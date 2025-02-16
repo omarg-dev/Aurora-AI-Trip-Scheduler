@@ -1,50 +1,56 @@
 [
     {
-        "location_name": "Al Masmak Fortress",
-        "text": "Step back in time at the Al Masmak Fortress, a mud-brick citadel that played a pivotal role in the recapture of Riyadh in 1902 by Ibn Saud. Imagine the clashing of swords and the echoes of victory within these very walls. Wander through its courtyard, climb the watchtowers, and explore the museum showcasing historical artifacts and photographs that vividly depict the events that shaped modern Saudi Arabia. Feel the weight of history as you stand where a kingdom was reborn.",
-        "rating": 5,
-        "interests": [
-            "Historical",
-            " Accessibility",
-            " Parking"
-        ],
-        "exact_location": "Al Imam Turki ibn Abdullah ibn Muhammad, Ad Dirah, Riyadh",
-        "time_slot": "9:00 AM - 11:00 AM",
-        "price": "Free",
-        "website": "https://www.museums.gov.sa/museums/en/museums/al-masmak-fortress",
-        "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
-    },
-    {
         "location_name": "National Museum of Saudi Arabia",
-        "text": "Journey through the ages at the National Museum of Saudi Arabia. From prehistoric times to the modern era, witness the captivating story of the Arabian Peninsula. Marvel at ancient artifacts, interactive exhibits, and meticulously recreated environments that bring the past to life. Explore the hall dedicated to Islam, showcasing the religion's profound influence on the region and the world. The museum offers a comprehensive understanding of Saudi Arabia's rich heritage and cultural identity.",
+        "text": "Welcome to the National Museum of Saudi Arabia, a cornerstone of Riyadh's cultural landscape. Here, you will embark on a captivating journey through the Arabian Peninsula's rich history, from prehistoric times to the modern era. The museum's eight halls showcase artifacts, historical documents, and interactive displays, offering profound insights into the kingdom's heritage and its pivotal role in Islamic civilization. The displays weave a compelling narrative of the Saudi people, their traditions, and their contributions to the world. Prepare to be transported through time as you uncover the captivating story of Saudi Arabia.",
         "rating": 5,
         "interests": [
             "Historical",
+            " Cultural",
+            " Museum",
             " Accessibility",
             " Parking"
         ],
-        "exact_location": "Historical Center King Abdulaziz, Al Murabba, Riyadh",
-        "time_slot": "11:30 AM - 2:30 PM",
-        "price": "20 SAR",
+        "exact_location": "King Saud Rd, Al Murabba, Riyadh",
+        "time_slot": "9:00 AM - 12:00 PM",
+        "price": "50-100 SAR",
         "website": "https://nationalmuseum.sa/en/",
         "image_url": "https://images.pexels.com/photos/11695881/pexels-photo-11695881.jpeg?auto=compress&cs=tinysrgb&h=350",
         "tts_filename": null
     },
     {
-        "location_name": "Edge of the World (Jebel Fihrayn)",
-        "text": "Prepare for an awe-inspiring adventure to the Edge of the World, or Jebel Fihrayn, a dramatic escarpment offering breathtaking panoramic views of the surrounding desert landscape. Imagine standing on the precipice, gazing out at the seemingly endless horizon. This geological wonder is a testament to the power of nature, shaped over millions of years. Embrace the thrill of exploration and capture stunning photographs of this unforgettable natural landmark.",
+        "location_name": "Masmak Fortress",
+        "text": "Next, we journey to the Masmak Fortress, a formidable clay and mud-brick citadel that stands as a potent symbol of Saudi Arabia's unification. In 1902, King Abdulaziz Al Saud and his men bravely stormed this very fortress, reclaiming Riyadh and setting the stage for the establishment of the modern kingdom. As you walk through its imposing gates, you'll feel the weight of history. Explore the courtyard, mosque, watchtowers, and learn about the courageous events that unfolded within these walls. Imagine the clashing of swords and the echoes of victory that resonate through time.",
         "rating": 4,
         "interests": [
-            "Nature",
-            " Adventure",
+            "Historical",
+            " Cultural",
+            " Architecture",
+            " Accessibility",
             " Parking"
         ],
-        "exact_location": "Jebel Fihrayn, Riyadh",
-        "time_slot": "3:30 PM - 6:30 PM",
-        "price": "Free (Transportation costs apply)",
-        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/edge-of-the-world",
-        "image_url": "https://images.pexels.com/photos/7450555/pexels-photo-7450555.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "exact_location": "Al Murabba, Riyadh",
+        "time_slot": "1:00 PM - 3:00 PM",
+        "price": "Free",
+        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/al-masmak-fortress",
+        "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": null
+    },
+    {
+        "location_name": "Diriyah",
+        "text": "Finally, we venture to Diriyah, a UNESCO World Heritage Site and the ancestral home of the Saudi royal family. This historical city was the first capital of the Saudi dynasty, dating back to the 18th century. Wander through the ruins of mud-brick palaces, mosques, and traditional houses, marveling at the architectural ingenuity of the time. As you explore the Al-Turaif district, the heart of Diriyah, you'll gain a deeper appreciation for the origins of the Saudi state and the cultural values that have shaped the nation.",
+        "rating": 5,
+        "interests": [
+            "Historical",
+            " Cultural",
+            " UNESCO World Heritage",
+            " Accessibility",
+            " Parking"
+        ],
+        "exact_location": "Diriyah, Riyadh",
+        "time_slot": "4:00 PM - 6:00 PM",
+        "price": "50-100 SAR",
+        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/diriyah",
+        "image_url": "https://images.pexels.com/photos/1885720/pexels-photo-1885720.jpeg?auto=compress&cs=tinysrgb&h=350",
         "tts_filename": null
     }
 ]
