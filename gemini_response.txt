@@ -1,18 +1,67 @@
 [
     {
         "location_name": "Al Masmak Fortress",
-        "text": "Step back in time at the Masmak Fortress! This clay and mudbrick citadel witnessed the birth of modern Saudi Arabia. Feel the echoes of history as you explore its courtyard and learn about Ibn Saud's daring recapture of Riyadh in 1902.",
+        "text": "Step back in time at Al Masmak Fortress, a clay and mud-brick citadel. Witness where the recapture of Riyadh began in 1902 by Ibn Saud, marking a pivotal moment in Saudi history. Imagine the clash of swords and the birth of a kingdom.",
         "rating": 5,
         "interests": [
             "Historical",
-            " Accessibility",
-            " Low Budget"
+            " Cultural",
+            " Accessibility"
         ],
-        "exact_location": "Al Thumairi Street, Riyadh",
+        "exact_location": "Al Imam Turki bin Abdullah bin Muhammad, Ad Dirah, Riyadh",
         "time_slot": "9:00 AM - 11:00 AM",
         "price": "Free",
-        "website": "https://www.museums.gov.sa/en/museums/al-masmak-fortress\n\nNational Museum of Saudi Arabia",
+        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/al-masmak-fortress",
         "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
         "tts_filename": "http://localhost:5000/static/tts_files/Al_Masmak_Fortress_voiceover.mp3"
+    },
+    {
+        "location_name": "National Museum of Saudi Arabia",
+        "text": "Delve into Saudi Arabia's rich heritage at the National Museum. From prehistoric times to the modern era, explore captivating exhibits showcasing art, history and culture. Discover the story of this land.",
+        "rating": 4,
+        "interests": [
+            "Historical",
+            " Cultural",
+            " Museum",
+            " Accessibility",
+            " Parking"
+        ],
+        "exact_location": "Historical Center, King Abdul Aziz Road, Riyadh",
+        "time_slot": "11:30 AM - 2:30 PM",
+        "price": "50-100 SAR",
+        "website": "https://nationalmuseum.sa/en/",
+        "image_url": "https://images.pexels.com/photos/11695881/pexels-photo-11695881.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "http://localhost:5000/static/tts_files/National_Museum_of_Saudi_Arabia_voiceover.mp3"
+    },
+    {
+        "location_name": "King Abdullah Mosque",
+        "text": "Experience the spiritual heart of Riyadh at the King Abdullah Mosque. Admire the modern Islamic architecture and serene atmosphere. Observe or participate in prayers, understanding the importance of faith in Saudi culture. Remember to dress respectfully.",
+        "rating": 4,
+        "interests": [
+            "Religious",
+            " Cultural",
+            " Accessibility"
+        ],
+        "exact_location": "King Saud Road, Al Olaya, Riyadh",
+        "time_slot": "3:30 PM - 5:00 PM",
+        "price": "Free",
+        "website": "N/A",
+        "image_url": "https://images.pexels.com/photos/14226687/pexels-photo-14226687.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "http://localhost:5000/static/tts_files/King_Abdullah_Mosque_voiceover.mp3"
+    },
+    {
+        "location_name": "Najd Village Restaurant",
+        "text": "Indulge in an authentic Najdi culinary experience at Najd Village. Savor traditional Saudi dishes in a setting that evokes the region's heritage. Enjoy the tastes of the kingdom.",
+        "rating": 4,
+        "interests": [
+            "Cultural",
+            " Restaurant"
+        ],
+        "exact_location": "Al Mathar Ash Shamali, Riyadh",
+        "time_slot": "6:30 PM - 8:00 PM",
+        "price": "100-200 SAR",
+        "website": "N/A",
+        "image_url": "https://images.pexels.com/photos/2031687/pexels-photo-2031687.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "http://localhost:5000/static/tts_files/Najd_Village_Restaurant_voiceover.mp3"
     }
 ]
