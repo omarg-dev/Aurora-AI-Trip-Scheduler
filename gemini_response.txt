@@ -1,71 +1,50 @@
 [
     {
-        "location_name": "National Museum of Saudi Arabia",
-        "text": "Welcome, fellow travelers, to the National Museum of Saudi Arabia! Prepare to journey through millennia, from the dawn of civilization on the Arabian Peninsula to the modern Kingdom. This isn't just a museum; it's a time capsule, a storyteller whispering tales of ancient trade routes, religious pilgrimages, and the unification of a nation. Marvel at prehistoric artifacts, intricate Islamic art, and captivating displays that bring Saudi Arabia's rich heritage to life. Don't miss the recreation of a traditional Najdi house, offering a glimpse into the daily lives of the kingdom's ancestors. The museum beautifully balances education and entertainment, providing a comprehensive and accessible experience for all.",
+        "location_name": "Al Masmak Fortress",
+        "text": "Step back in time at the Al Masmak Fortress, a mud-brick citadel that played a pivotal role in the recapture of Riyadh in 1902 by Ibn Saud. Imagine the clashing of swords and the echoes of victory within these very walls. Wander through its courtyard, climb the watchtowers, and explore the museum showcasing historical artifacts and photographs that vividly depict the events that shaped modern Saudi Arabia. Feel the weight of history as you stand where a kingdom was reborn.",
         "rating": 5,
         "interests": [
             "Historical",
-            " Cultural",
             " Accessibility",
-            " Parking",
-            " Cafe"
+            " Parking"
         ],
-        "exact_location": "King Saud Rd, Al Murabba, Riyadh",
-        "time_slot": "9:00 AM - 12:00 PM",
-        "price": "50-100 SAR",
+        "exact_location": "Al Imam Turki ibn Abdullah ibn Muhammad, Ad Dirah, Riyadh",
+        "time_slot": "9:00 AM - 11:00 AM",
+        "price": "Free",
+        "website": "https://www.museums.gov.sa/museums/en/museums/al-masmak-fortress",
+        "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": null
+    },
+    {
+        "location_name": "National Museum of Saudi Arabia",
+        "text": "Journey through the ages at the National Museum of Saudi Arabia. From prehistoric times to the modern era, witness the captivating story of the Arabian Peninsula. Marvel at ancient artifacts, interactive exhibits, and meticulously recreated environments that bring the past to life. Explore the hall dedicated to Islam, showcasing the religion's profound influence on the region and the world. The museum offers a comprehensive understanding of Saudi Arabia's rich heritage and cultural identity.",
+        "rating": 5,
+        "interests": [
+            "Historical",
+            " Accessibility",
+            " Parking"
+        ],
+        "exact_location": "Historical Center King Abdulaziz, Al Murabba, Riyadh",
+        "time_slot": "11:30 AM - 2:30 PM",
+        "price": "20 SAR",
         "website": "https://nationalmuseum.sa/en/",
         "image_url": "https://images.pexels.com/photos/11695881/pexels-photo-11695881.jpeg?auto=compress&cs=tinysrgb&h=350",
         "tts_filename": null
     },
     {
-        "location_name": "Masmak Fortress",
-        "text": "Our next stop transports us to the heart of Riyadh's history: Masmak Fortress! This imposing clay and mud-brick citadel witnessed the daring recapture of Riyadh in 1902 by Ibn Saud, a pivotal moment in the founding of modern Saudi Arabia. Imagine the clashing of swords and the fervor of battle as you explore its walls, towers, and mosque. The fortress now serves as a museum, displaying artifacts and exhibits that chronicle this dramatic period. Climb to the top of the watchtower for panoramic views of the surrounding area, and feel the weight of history beneath your feet. It's a powerful and evocative experience.",
+        "location_name": "Edge of the World (Jebel Fihrayn)",
+        "text": "Prepare for an awe-inspiring adventure to the Edge of the World, or Jebel Fihrayn, a dramatic escarpment offering breathtaking panoramic views of the surrounding desert landscape. Imagine standing on the precipice, gazing out at the seemingly endless horizon. This geological wonder is a testament to the power of nature, shaped over millions of years. Embrace the thrill of exploration and capture stunning photographs of this unforgettable natural landmark.",
         "rating": 4,
         "interests": [
-            "Historical",
-            " Cultural",
-            " Accessibility",
+            "Nature",
+            " Adventure",
             " Parking"
         ],
-        "exact_location": "Al Imam Turki Ibn Abdullah Ibn Muhammad, Ad Dirah, Riyadh",
-        "time_slot": "1:00 PM - 3:00 PM",
-        "price": "Free",
-        "website": "N/A",
-        "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
-    },
-    {
-        "location_name": "Diriyah",
-        "text": "Prepare to step back in time at Diriyah, the historical capital of the First Saudi State and a UNESCO World Heritage site. This ancient city, now carefully restored, offers a mesmerizing glimpse into the kingdom's roots. Wander through the narrow, winding streets of At-Turaif district, marvel at the traditional Najdi architecture, and imagine life as it was centuries ago. Explore the Salwa Palace, once the seat of power, and immerse yourself in the stories of kings and warriors. Diriyah is more than just ruins; it's a living testament to Saudi Arabia's enduring legacy.",
-        "rating": 5,
-        "interests": [
-            "Historical",
-            " Cultural",
-            " Accessibility",
-            " Parking",
-            " Cafe",
-            " Restaurants"
-        ],
-        "exact_location": "Diriyah, Riyadh",
-        "time_slot": "4:00 PM - 6:00 PM",
-        "price": "50-100 SAR",
-        "website": "https://dgda.gov.sa/en/",
-        "image_url": "https://images.pexels.com/photos/1885720/pexels-photo-1885720.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
-    },
-    {
-        "location_name": "Najd Village Restaurant",
-        "text": "As the day winds down, let's treat ourselves to an authentic culinary experience at Najd Village Restaurant. Here, you'll savor the rich flavors of traditional Saudi cuisine in a setting that evokes the warmth and hospitality of a Najdi home. Imagine sitting on comfortable floor cushions, surrounded by intricate carpets and traditional decor, as you feast on dishes like Mandi (slow-cooked meat and rice) and Kabsa (a fragrant rice dish with spices). It's more than just a meal; it's a cultural immersion, a chance to connect with the heart and soul of Saudi Arabia through its food.",
-        "rating": 4,
-        "interests": [
-            "Food",
-            " Cultural"
-        ],
-        "exact_location": "Al Olaya, Riyadh",
-        "time_slot": "7:00 PM - 8:30 PM",
-        "price": "100-200 SAR",
-        "website": "N/A",
-        "image_url": "https://images.pexels.com/photos/2031687/pexels-photo-2031687.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "exact_location": "Jebel Fihrayn, Riyadh",
+        "time_slot": "3:30 PM - 6:30 PM",
+        "price": "Free (Transportation costs apply)",
+        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/edge-of-the-world",
+        "image_url": "https://images.pexels.com/photos/7450555/pexels-photo-7450555.jpeg?auto=compress&cs=tinysrgb&h=350",
         "tts_filename": null
     }
 ]

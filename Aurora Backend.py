@@ -184,15 +184,27 @@ def generate():
         user_input = request.json
         print(f"API call received with input: {user_input}")
         
+        # Validate and set default values for all fields
+        user_input = {
+            'destination': user_input.get('destination'),
+            'solo': user_input.get('solo', False),
+            'time_slot': user_input.get('time_slot'),
+            'interests': user_input.get('interests', []),
+            'budget': user_input.get('budget'),
+            'accessibility': user_input.get('accessibility', False),
+            'restaurants': user_input.get('restaurants', False)
+        }
+
         # Validate required fields
         required_fields = ['destination', 'time_slot', 'interests', 'budget']
-        for field in required_fields:
-            if field not in user_input or not user_input[field]:
-                return jsonify({"error": f"Missing required field: {field}"}), 400
+        missing_fields = [field for field in required_fields if not user_input.get(field)]
+        
+        if missing_fields:
+            return jsonify({"error": f"Missing required fields: {', '.join(missing_fields)}"}), 400
 
         # Ensure interests is a list
         if not isinstance(user_input['interests'], list):
-            return jsonify({"error": "Interests must be a list"}), 400
+            user_input['interests'] = [user_input['interests']]
 
         itinerary = generate_itinerary(user_input)
         

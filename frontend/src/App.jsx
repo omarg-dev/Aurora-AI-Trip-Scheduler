@@ -5,33 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const [itinerary, setItinerary] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const handleFormSubmit = async (data) => {
-    setIsLoading(true);
-    setError(null);
-    try {
-      const response = await fetch("http://localhost:5000/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to generate itinerary");
-      }
-
-      const responseData = await response.json();
-      setItinerary(responseData.itinerary);
-    } catch (err) {
-      setError(err.message);
-      console.error("Error generating itinerary:", err);
-    } finally {
-      setIsLoading(false);
-    }
+    setItinerary(data);
   };
 
   return (
@@ -61,11 +37,7 @@ function App() {
                 Create New Itinerary
               </button>
             </div>
-            <TimelineScheduler
-              itineraryData={itinerary}
-              isLoading={isLoading}
-              error={error}
-            />
+            <TimelineScheduler itineraryData={itinerary} />
           </motion.div>
         )}
       </AnimatePresence>

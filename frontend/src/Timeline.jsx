@@ -75,17 +75,17 @@ const TimelineScheduler = ({ itineraryData, isLoading, error }) => {
   const scheduleData =
     itineraryData?.map((item) => ({
       time: item.time_slot,
-      title: item.location,
+      title: item.location_name, // Changed from location to location_name
       description: item.text,
-      duration: item.time_slot, // Using the full time slot as duration
-      image: item.image_url || "/placeholder-image.jpg", // Add a fallback image
-      cost: "Free", // Default value if not provided by backend
-      website: "#", // You might want to add this to your backend response
+      duration: item.time_slot,
+      image: item.image_url || "/placeholder-image.jpg",
+      cost: item.price || "Free", // Added price from backend
+      website: item.website || "#", // Added website from backend
       details: {
-        address: item.location,
-        rating: 4.5, // You might want to add this to your backend response
+        address: item.exact_location, // Changed to exact_location
+        rating: item.rating || 4.5, // Added rating from backend
         bestTime: item.time_slot,
-        facilities: item.accessibility ? item.accessibility.split(", ") : [],
+        facilities: item.interests || [], // Changed to interests
       },
       audioDescription: item.tts_filename,
     })) || [];
