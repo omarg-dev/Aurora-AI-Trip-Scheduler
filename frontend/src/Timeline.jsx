@@ -87,7 +87,7 @@ const TimelineScheduler = ({ itineraryData, isLoading, error }) => {
         bestTime: item.time_slot,
         facilities: item.interests || [], // Changed to interests
       },
-      audioDescription: "../.." + item.tts_filename,
+      audioDescription: item.tts_filename || null, // Ensure null if no audio file
     })) || [];
 
   const getCardHeight = (duration) => {
@@ -307,53 +307,55 @@ const TimelineScheduler = ({ itineraryData, isLoading, error }) => {
                     {/* Replace the existing audio control section with this */}
                     <div className="p-4 bg-gray-50 border-t border-gray-100">
                       <div className="flex items-center space-x-4">
-                        {/* Modern Audio Player */}
                         <div className="flex items-center space-x-3">
-                          <button
-                            onClick={() =>
-                              setCurrentPlayingAudio(
-                                currentPlayingAudio === index ? null : index
-                              )
-                            }
-                            className={`group flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                              currentPlayingAudio === index
-                                ? "bg-purple-800 text-white"
-                                : "bg-white hover:bg-purple-100 text-purple-600 hover:text-purple-700 border border-purple-200"
-                            }`}
-                          >
-                            <div className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm">
-                              {currentPlayingAudio === index ? (
-                                <svg
-                                  className="w-4 h-4"
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 002 0V8a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v4a1 1 0 002 0V8a1 1 0 00-1-1z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                              ) : (
-                                <svg
-                                  className="w-4 h-4 ml-1"
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                              )}
-                            </div>
-                          </button>
-                          {/* Audio Visualizer */}
-                          <AudioVisualizer
-                            isPlaying={currentPlayingAudio === index}
-                            audioUrl={item.audioDescription}
-                          />
+                          {item.audioDescription && ( // Only show audio controls if audio exists
+                            <>
+                              <button
+                                onClick={() =>
+                                  setCurrentPlayingAudio(
+                                    currentPlayingAudio === index ? null : index
+                                  )
+                                }
+                                className={`group flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
+                                  currentPlayingAudio === index
+                                    ? "bg-purple-800 text-white"
+                                    : "bg-white hover:bg-purple-100 text-purple-600 hover:text-purple-700 border border-purple-200"
+                                }`}
+                              >
+                                <div className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm">
+                                  {currentPlayingAudio === index ? (
+                                    <svg
+                                      className="w-4 h-4"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        fillRule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 002 0V8a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v4a1 1 0 002 0V8a1 1 0 00-1-1z"
+                                        clipRule="evenodd"
+                                      />
+                                    </svg>
+                                  ) : (
+                                    <svg
+                                      className="w-4 h-4 ml-1"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        fillRule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                        clipRule="evenodd"
+                                      />
+                                    </svg>
+                                  )}
+                                </div>
+                              </button>
+                              <AudioVisualizer
+                                isPlaying={currentPlayingAudio === index}
+                                audioUrl={item.audioDescription}
+                              />
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>

@@ -31,7 +31,7 @@ def generate_itinerary(user_input):
     Format the response in distinct sections as follows:
         [Location Name 1 (e.g. Riyadh Museum)]
         ===
-        [Narration 1 (max 50 words)]
+        [Narration 1 (max 200 words)]
         ===
         [Rating number out of 5 (e.g. 4)]
         ===
@@ -47,7 +47,7 @@ def generate_itinerary(user_input):
         ---
         [Location Name 2 (e.g. Museum of Art)]
         ===
-        [Narration 2 (max 50 words)]
+        [Narration 2 (max 200 words)]
         ===
         [Interests (e.g. Historical, Nature, Parking, Accessiblity, etc...)]
         ===
@@ -65,9 +65,10 @@ def generate_itinerary(user_input):
     INSURE TO FOLLOW THESE GUIDELINES:
     DO NOT WRITE ANY EXTRA TEXT IN THE RESPONSE.
     ENSURE THE FORMAT IS STRICTLY FOLLOWED.
-    THE NARRATION MUST NOT EXCEED 50 WORDS PER LOCATION AND MUST NOT INCLUDE ANY MARKDOWN CHARACTERS (e.g. bolding text with **text**).
+    THE NARRATION MUST NOT EXCEED 200 WORDS PER LOCATION AND MUST NOT INCLUDE ANY MARKDOWN CHARACTERS (e.g. bolding text with **text**).
     ENSURE NO LOCATION IS REPEATED IN THE RESPONSE.
     ENSURE THE RESPONSE INCLUDES AT LEAST 3 LOCATIONS AND NO MORE THAN 10 LOCATIONS.
+    ENSURE THE TIMELINE IS REALISTIC AND ALLOWS FOR TRAVEL TIME BETWEEN LOCATIONS.
     ENSURE NO TWO LOCATIONS ARE AT THE SAME TIMESLOT.
     DO NOT WRITE THE ZIP CODE IN THE EXACT LOCATION.
     ENSURE THE BUDGET IS REALISTIC FOR THE LOCATION.
@@ -92,7 +93,7 @@ def generate_itinerary(user_input):
         location_name, narration, rating, interests, exact_location, timeslot, price, website = parts[:8]
         print(f"Processing stop: {location_name.strip()}")
         image_url = fetch_image(location_name.strip()) if location_name.strip() else None
-        tts_file = generate_voiceover(narration.strip(), location_name.strip())
+        tts_file = generate_voiceover(narration.strip(), location_name.strip())  # Uncomment this line
         segments.append({
             "location_name": location_name.strip('[]'),
             "text": narration.strip(),
@@ -129,13 +130,14 @@ def generate_voiceover(text, name=""):
     response = requests.post(url, headers=headers, json=data)
     if response.status_code == 200:
         os.makedirs("static/tts_files", exist_ok=True)  # Ensure directory exists
-        audio_filename = f"static/tts_files/{name.replace(' ', '_')}_voiceover.mp3"
+        filename = f"{name.replace(' ', '_')}_voiceover.mp3"
+        audio_filename = f"static/tts_files/{filename}"
 
         with open(audio_filename, "wb") as f:
             f.write(response.content)
         
         print(f"Voiceover saved: {audio_filename}")
-        return f"/{audio_filename}"  # Return accessible path
+        return f"http://localhost:5000/static/tts_files/{filename}"  # Return full URL
     print(f"ElevenLabs API error: {response.status_code} - {response.text}")
     return None
 
@@ -174,7 +176,7 @@ def test_generate():
     return result
 
 # App
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 CORS(app)  # Enable CORS for all routes
 
 @app.route("/generate", methods=["POST"])
@@ -230,8 +232,6 @@ def validate_api_keys():
     return True
 
 if __name__ == "__main__":
-    # print("Launching test run...")
-    # result = test_generate()
     if not validate_api_keys():
         print("Error: Missing required API keys. Please check your .env file.")
         exit(1)
