@@ -1,50 +1,18 @@
 [
     {
-        "location_name": "Neom Bay",
-        "text": "Welcome to Neom Bay, a shimmering coastal hub! Envision pristine beaches meeting innovative cityscapes. This is just the beginning of our exploration. Imagine relaxation and modern living harmonizing perfectly.",
-        "rating": 4,
+        "location_name": "Al Masmak Fortress",
+        "text": "Step back in time at the Masmak Fortress! This clay and mudbrick citadel witnessed the birth of modern Saudi Arabia. Feel the echoes of history as you explore its courtyard and learn about Ibn Saud's daring recapture of Riyadh in 1902.",
+        "rating": 5,
         "interests": [
-            "Nature",
-            " Entertainment",
-            " Accessibility"
+            "Historical",
+            " Accessibility",
+            " Low Budget"
         ],
-        "exact_location": "Neom Bay, NEOM",
+        "exact_location": "Al Thumairi Street, Riyadh",
         "time_slot": "9:00 AM - 11:00 AM",
         "price": "Free",
-        "website": "https://www.neom.com/en-us/whatisthenew/communities/neombay",
-        "image_url": "https://images.pexels.com/photos/30733824/pexels-photo-30733824.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": "http://localhost:5000/static/tts_files/Neom_Bay_voiceover.mp3"
-    },
-    {
-        "location_name": "OXAGON",
-        "text": "Next, journey to OXAGON, NEOM's industrial city. See the future of manufacturing and innovation where cutting-edge technology meets sustainability. It is a glimpse into a new era of industry!",
-        "rating": 3,
-        "interests": [
-            "Cultural",
-            " Entertainment",
-            " Accessibility"
-        ],
-        "exact_location": "OXAGON, NEOM",
-        "time_slot": "12:00 PM - 2:00 PM",
-        "price": "Free",
-        "website": "https://www.neom.com/en-us/whatisthenew/communities/oxagon",
-        "image_url": null,
-        "tts_filename": "http://localhost:5000/static/tts_files/OXAGON_voiceover.mp3"
-    },
-    {
-        "location_name": "THE LINE Exhibition",
-        "text": "Experience THE LINE, a revolutionary urban design concept. This exhibition showcases NEOM's vision for a car-free, vertical city, prioritizing pedestrian life and sustainability. A truly unique concept.",
-        "rating": 4,
-        "interests": [
-            "Cultural",
-            " Nature",
-            " Accessibility"
-        ],
-        "exact_location": "THE LINE Exhibition, NEOM",
-        "time_slot": "3:00 PM - 5:00 PM",
-        "price": "Free",
-        "website": "https://www.neom.com/en-us/whatisthenew/theline",
-        "image_url": "https://images.pexels.com/photos/1433526/pexels-photo-1433526.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": "http://localhost:5000/static/tts_files/THE_LINE_Exhibition_voiceover.mp3"
+        "website": "https://www.museums.gov.sa/en/museums/al-masmak-fortress\n\nNational Museum of Saudi Arabia",
+        "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "http://localhost:5000/static/tts_files/Al_Masmak_Fortress_voiceover.mp3"
     }
 ]
