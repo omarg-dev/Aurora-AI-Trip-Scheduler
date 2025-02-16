@@ -1,52 +1,50 @@
 [
     {
-        "location_name": "Al Masmak Fortress",
-        "text": "Imagine stepping back in time to the very heart of Riyadh. The Al Masmak Fortress, a mud-brick marvel, stands as a potent reminder of Saudi Arabia's dramatic past. It was here, in 1902, that Ibn Saud, with a small band of warriors, recaptured Riyadh, marking a pivotal moment in the unification of the kingdom. Walk through its imposing gates, explore the mosque, the diwan, and the well, and feel the echoes of history resonate within these sturdy walls. It's a journey into the soul of the nation, a story etched in mud and stone.",
-        "rating": 5,
-        "interests": [
-            "Historical",
-            " Accessibility",
-            " Free",
-            " Parking"
-        ],
-        "exact_location": "Al Thumairi Street, Riyadh",
-        "time_slot": "9:00 AM - 11:00 AM",
-        "price": "Free",
-        "website": "https://www.visitsaudi.com/en/see-do/destinations/riyadh/al-masmak-fortress",
-        "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": "http://localhost:5000/static/tts_files/Al_Masmak_Fortress_voiceover.mp3"
-    },
-    {
-        "location_name": "Souq Al Zal",
-        "text": "From the stoic walls of Al Masmak, let's dive into the vibrant tapestry of Souq Al Zal, one of Riyadh's oldest markets. For centuries, this bustling souq has been a center of trade and culture. Wander through its narrow alleyways, where the air is thick with the aroma of spices, incense, and traditional perfumes. Discover antique treasures, browse handcrafted carpets, and haggle for unique souvenirs. It's a feast for the senses and a chance to experience the authentic spirit of Riyadh. Don't forget to try some local dates and coffee!",
-        "rating": 4,
-        "interests": [
-            "Shopping",
-            " Historical",
-            " Budget-friendly"
-        ],
-        "exact_location": "Al Imam Muhammad Ibn Saud Rd, Ad Dirah, Riyadh",
-        "time_slot": "11:30 AM - 2:00 PM",
-        "price": "Free (but budget for shopping)",
-        "website": "N/A",
-        "image_url": "https://images.pexels.com/photos/7168610/pexels-photo-7168610.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": "http://localhost:5000/static/tts_files/Souq_Al_Zal_voiceover.mp3"
-    },
-    {
-        "location_name": "King Abdulaziz Park",
-        "text": "Escape the urban bustle and find serenity at King Abdulaziz Park. This expansive green space offers a tranquil retreat where you can relax and reconnect with nature. Stroll along winding pathways, admire the vibrant flowerbeds, and find a peaceful spot by the lake. The park is a popular destination for families and individuals alike, offering a welcome respite from the city's intensity. Take a moment to breathe in the fresh air, soak up the sunshine, and appreciate the simple beauty of nature.",
+        "location_name": "Neom Bay",
+        "text": "Welcome to Neom Bay, a shimmering coastal hub! Envision pristine beaches meeting innovative cityscapes. This is just the beginning of our exploration. Imagine relaxation and modern living harmonizing perfectly.",
         "rating": 4,
         "interests": [
             "Nature",
-            " Budget-friendly",
-            " Accessibility",
-            " Parking"
+            " Entertainment",
+            " Accessibility"
         ],
-        "exact_location": "Riyadh",
-        "time_slot": "2:30 PM - 5:00 PM",
+        "exact_location": "Neom Bay, NEOM",
+        "time_slot": "9:00 AM - 11:00 AM",
         "price": "Free",
-        "website": "N/A",
-        "image_url": "https://images.pexels.com/photos/3933541/pexels-photo-3933541.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": "http://localhost:5000/static/tts_files/King_Abdulaziz_Park_voiceover.mp3"
+        "website": "https://www.neom.com/en-us/whatisthenew/communities/neombay",
+        "image_url": "https://images.pexels.com/photos/30733824/pexels-photo-30733824.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "http://localhost:5000/static/tts_files/Neom_Bay_voiceover.mp3"
+    },
+    {
+        "location_name": "OXAGON",
+        "text": "Next, journey to OXAGON, NEOM's industrial city. See the future of manufacturing and innovation where cutting-edge technology meets sustainability. It is a glimpse into a new era of industry!",
+        "rating": 3,
+        "interests": [
+            "Cultural",
+            " Entertainment",
+            " Accessibility"
+        ],
+        "exact_location": "OXAGON, NEOM",
+        "time_slot": "12:00 PM - 2:00 PM",
+        "price": "Free",
+        "website": "https://www.neom.com/en-us/whatisthenew/communities/oxagon",
+        "image_url": null,
+        "tts_filename": "http://localhost:5000/static/tts_files/OXAGON_voiceover.mp3"
+    },
+    {
+        "location_name": "THE LINE Exhibition",
+        "text": "Experience THE LINE, a revolutionary urban design concept. This exhibition showcases NEOM's vision for a car-free, vertical city, prioritizing pedestrian life and sustainability. A truly unique concept.",
+        "rating": 4,
+        "interests": [
+            "Cultural",
+            " Nature",
+            " Accessibility"
+        ],
+        "exact_location": "THE LINE Exhibition, NEOM",
+        "time_slot": "3:00 PM - 5:00 PM",
+        "price": "Free",
+        "website": "https://www.neom.com/en-us/whatisthenew/theline",
+        "image_url": "https://images.pexels.com/photos/1433526/pexels-photo-1433526.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "http://localhost:5000/static/tts_files/THE_LINE_Exhibition_voiceover.mp3"
     }
 ]
