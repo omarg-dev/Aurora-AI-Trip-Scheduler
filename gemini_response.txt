@@ -1,68 +1,69 @@
 [
     {
-        "location_name": "National Museum of Saudi Arabia",
-        "text": "Journey through Saudi Arabia's captivating history, from ancient kingdoms to the modern era. Discover artifacts and interactive exhibits.",
-        "rating": 5,
-        "interests": [
-            "Historical",
-            " Cultural",
-            " Accessibility",
-            " Parking"
-        ],
-        "exact_location": "King Saud Rd, Al Murabba, Riyadh",
-        "time_slot": "9:00 AM - 12:00 PM",
-        "price": "50-100 SAR",
-        "website": "https://en.wikipedia.org/wiki/National_Museum_of_Saudi_Arabia",
-        "image_url": "https://images.pexels.com/photos/11695881/pexels-photo-11695881.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
-    },
-    {
-        "location_name": "Masmak Fortress",
-        "text": "Step back in time at this iconic mud-brick fortress. Witness where the recapture of Riyadh began in 1902.",
+        "location_name": "Bab Makkah",
+        "text": "Step back in time at Bab Makkah, one of the historical gates of Jeddah's old city. Imagine the bustling trade and pilgrims passing through this very entrance for centuries. A true glimpse into Jeddah's rich past.",
         "rating": 4,
         "interests": [
             "Historical",
-            " Cultural",
-            " Accessibility",
-            " Parking"
+            " Walking",
+            " Photography"
         ],
-        "exact_location": "Al Imam Turki bin Abdullah bin Muhammad, Ad Dirah, Riyadh",
-        "time_slot": "1:00 PM - 3:00 PM",
+        "exact_location": "Al Balad, Jeddah",
+        "time_slot": "6:00 PM - 7:00 PM",
         "price": "Free",
-        "website": "https://www.museums.sa/en/museums/the-masmak-fortress",
-        "image_url": "https://images.pexels.com/photos/1885719/pexels-photo-1885719.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
+        "website": "(No website available)",
+        "image_url": "https://images.pexels.com/photos/30698892/pexels-photo-30698892.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "/static/tts_files/Bab_Makkah_voiceover.mp3"
     },
     {
-        "location_name": "Diriyah",
-        "text": "Explore the historic heart of Saudi Arabia, a UNESCO World Heritage site. See the birthplace of the Saudi dynasty.",
-        "rating": 5,
-        "interests": [
-            "Historical",
-            " Cultural",
-            " Accessibility",
-            " Parking"
-        ],
-        "exact_location": "Diriyah, Riyadh",
-        "time_slot": "4:00 PM - 6:00 PM",
-        "price": "50-100 SAR",
-        "website": "https://dgda.gov.sa/en/diriyah/",
-        "image_url": "https://images.pexels.com/photos/1885720/pexels-photo-1885720.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
-    },
-    {
-        "location_name": "Najd Village Restaurant",
-        "text": "Experience authentic Saudi cuisine in a traditional setting. Indulge in regional dishes and flavors.",
+        "location_name": "Nasseef House",
+        "text": "The Nasseef House, a beautifully preserved coral stone building, was once a gathering place for intellectuals and even hosted King Abdulaziz. Explore its unique architecture and imagine the stories within its walls.",
         "rating": 4,
         "interests": [
-            "Food",
-            " Cultural"
+            "Historical",
+            " Architecture",
+            " Photography",
+            " Partially Accessible"
         ],
-        "exact_location": "Al Murabba, Riyadh",
-        "time_slot": "7:30 PM - 9:00 PM",
-        "price": "100-200 SAR",
-        "website": "https://najdvillage.com/",
-        "image_url": "https://images.pexels.com/photos/2031687/pexels-photo-2031687.jpeg?auto=compress&cs=tinysrgb&h=350",
-        "tts_filename": null
+        "exact_location": "Al Balad, Jeddah",
+        "time_slot": "7:30 PM - 8:30 PM",
+        "price": "Free",
+        "website": "(No official website; search \"Nasseef House Jeddah\" for articles)",
+        "image_url": "https://images.pexels.com/photos/6393027/pexels-photo-6393027.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "/static/tts_files/Nasseef_House_voiceover.mp3"
+    },
+    {
+        "location_name": "Al-Shafi Mosque",
+        "text": "Al-Shafi Mosque stands as a testament to Jeddah's enduring Islamic heritage. Admire its ancient minaret and intricate details, reflecting centuries of architectural evolution. Note that non-Muslims cannot enter during prayer times.",
+        "rating": 3,
+        "interests": [
+            "Historical",
+            " Religious",
+            " Architecture",
+            " Photography"
+        ],
+        "exact_location": "Al Balad, Jeddah",
+        "time_slot": "9:00 PM - 10:00 PM",
+        "price": "Free",
+        "website": "(No website available)",
+        "image_url": "https://images.pexels.com/photos/30698863/pexels-photo-30698863.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "/static/tts_files/Al-Shafi_Mosque_voiceover.mp3"
+    },
+    {
+        "location_name": "Souq Al Alawi",
+        "text": "Immerse yourselves in the vibrant atmosphere of Souq Al Alawi. Get lost in a maze of stalls offering everything from spices to textiles. Bargain for souvenirs and experience the true essence of Jeddah's commerce.",
+        "rating": 4,
+        "interests": [
+            "Shopping",
+            " Culture",
+            " Walking",
+            " Photography"
+        ],
+        "exact_location": "Al Balad, Jeddah",
+        "time_slot": "10:00 PM - 11:30 PM",
+        "price": "Variable (depends on purchases)",
+        "website": "(No official website; search \"Souq Al Alawi Jeddah\" for general information)",
+        "image_url": "https://images.pexels.com/photos/7168610/pexels-photo-7168610.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "tts_filename": "/static/tts_files/Souq_Al_Alawi_voiceover.mp3"
     }
 ]

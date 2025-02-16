@@ -87,7 +87,7 @@ const TimelineScheduler = ({ itineraryData, isLoading, error }) => {
         bestTime: item.time_slot,
         facilities: item.interests || [], // Changed to interests
       },
-      audioDescription: item.tts_filename,
+      audioDescription: "../.." + item.tts_filename,
     })) || [];
 
   const getCardHeight = (duration) => {

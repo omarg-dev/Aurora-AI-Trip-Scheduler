@@ -31,7 +31,7 @@ def generate_itinerary(user_input):
     Format the response in distinct sections as follows:
         [Location Name 1 (e.g. Riyadh Museum)]
         ===
-        [Narration 1 (max 30 words)]
+        [Narration 1 (max 50 words)]
         ===
         [Rating number out of 5 (e.g. 4)]
         ===
@@ -47,7 +47,7 @@ def generate_itinerary(user_input):
         ---
         [Location Name 2 (e.g. Museum of Art)]
         ===
-        [Narration 2 (max 30 words)]
+        [Narration 2 (max 50 words)]
         ===
         [Interests (e.g. Historical, Nature, Parking, Accessiblity, etc...)]
         ===
@@ -65,7 +65,7 @@ def generate_itinerary(user_input):
     INSURE TO FOLLOW THESE GUIDELINES:
     DO NOT WRITE ANY EXTRA TEXT IN THE RESPONSE.
     ENSURE THE FORMAT IS STRICTLY FOLLOWED.
-    THE NARRATION MUST NOT EXCEED 30 WORDS PER LOCATION AND MUST NOT INCLUDE ANY MARKDOWN CHARACTERS (e.g. bolding text with **text**).
+    THE NARRATION MUST NOT EXCEED 50 WORDS PER LOCATION AND MUST NOT INCLUDE ANY MARKDOWN CHARACTERS (e.g. bolding text with **text**).
     ENSURE NO LOCATION IS REPEATED IN THE RESPONSE.
     ENSURE THE RESPONSE INCLUDES AT LEAST 3 LOCATIONS AND NO MORE THAN 10 LOCATIONS.
     ENSURE NO TWO LOCATIONS ARE AT THE SAME TIMESLOT.
@@ -92,7 +92,7 @@ def generate_itinerary(user_input):
         location_name, narration, rating, interests, exact_location, timeslot, price, website = parts[:8]
         print(f"Processing stop: {location_name.strip()}")
         image_url = fetch_image(location_name.strip()) if location_name.strip() else None
-        tts_file = None #generate_voiceover(narration.strip(), location_name.strip())
+        tts_file = generate_voiceover(narration.strip(), location_name.strip())
         segments.append({
             "location_name": location_name.strip('[]'),
             "text": narration.strip(),
@@ -230,8 +230,8 @@ def validate_api_keys():
     return True
 
 if __name__ == "__main__":
-    print("Launching test run...")
-    result = test_generate()
+    # print("Launching test run...")
+    # result = test_generate()
     if not validate_api_keys():
         print("Error: Missing required API keys. Please check your .env file.")
         exit(1)
