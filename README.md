@@ -3,7 +3,9 @@
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
 
-![alt text](<media/Aurora Logo.png>)
+<div align="center">
+        <img src="media/Aurora Logo.png" alt="logo" width="200">
+</div>
 
 # AURORA-AI-TRIP-SCHEDULER
 
