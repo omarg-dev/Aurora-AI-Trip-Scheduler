@@ -58,9 +58,8 @@
 
 Aurora is an AI-powered travel itinerary platform designed to generate personalized, multi-stop trips complete with immersive audio narrations and contextual imagery. Built on a decoupled full-stack architecture, the project uses a Python/Flask backend to orchestrate API integrations (Google Gemini, ElevenLabs, Pexels) and a React (Vite) frontend to deliver a smooth, interactive user experience.
 
-The core value of Aurora lies in its ability to transform raw user preferences—such as destination, budget, group size, and interests—into a structured, narratively driven timeline. By combining generative AI with text-to-speech and dynamic UI animations (Framer Motion), the application provides a highly polished, engaging alternative to static travel planning tools.
+![Demo Showcase](media/image.png)
 
-<video controls src="media/Media3.mp4" title="Title"></video>
 
 ---
 
