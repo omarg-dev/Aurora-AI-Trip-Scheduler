@@ -46,11 +46,7 @@
   - [📋 Prerequisites](#-prerequisites)
   - [⚙ ️ Installation](#-installation)
   - [💻 Usage](#-usage)
-  - [🧪 Testing](#-testing)
-- [📈 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [✨ Acknowledgments](#-acknowledgments)
+- [📈 Presentation](#-presentation)
 
 ---
 
@@ -423,5 +419,4 @@ Checkout the project presentation materials:
 - [Project Overview (2)](media/Media3.mp4)
 - [Powerpoint Presentation](media/AI_Tourism_Solution_Presentation.pptx)
 
-
----
+[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
